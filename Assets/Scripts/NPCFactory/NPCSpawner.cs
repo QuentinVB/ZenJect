@@ -7,31 +7,37 @@ using Zenject;
 
 public class NPCSpawner : ITickable
 {
-    readonly NPCControler.Factory _NPCFactory;
+    readonly NPC.Factory _NPCFactory;
     const float MIN_ENEMY_SPEED = 0.1f;
-    const float MAX_ENEMY_SPEED = 2.0f;
+    const float MAX_ENEMY_SPEED = 0.5f;
 
-    public NPCSpawner(NPCControler.Factory NPCFactory)
+    IPositionDirector _position;
+    //IAnimCtrl _animationControl;
+
+
+    public NPCSpawner(NPC.Factory NPCFactory, IPositionDirector position/*, IAnimCtrl animationControl*/)
     {
         _NPCFactory = NPCFactory;
+        _position = position;
+        //_animationControl = animationControl;
+
         Debug.Log("Installed NPCSpawner");
     }
+
 
     public void Tick()
     {
         if (ShouldSpawnNewNPC())
         {
             var newSpeed = UnityEngine.Random.Range(MIN_ENEMY_SPEED, MAX_ENEMY_SPEED);
-            var npc = _NPCFactory.Create(newSpeed);
+            var npc = _NPCFactory.Create(/*_animationControl,*/_position, newSpeed);
         }
         //Debug.Log("Tick");
-
     }
 
     private bool ShouldSpawnNewNPC()
     {
-        return (Input.GetKeyDown(KeyCode.A)) ? true : false ;
+        return (Input.GetKeyDown(KeyCode.A)) ? true : false;
     }
 }
-
 

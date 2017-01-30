@@ -23,6 +23,5 @@ public class PositionDirector : IPositionDirector
     public PositionDirector()
     {
         Debug.Log("EndBindingPositionDirector");
-
     }
 }
