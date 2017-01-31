@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ITailor
+public interface ITailor: INPCComponent
 {
 
 }
@@ -26,6 +26,11 @@ public class Tailor : ITailor
     private void setTheTexture(string job)
     {
        
+    }
+
+    public void setup(NPC NPCToBeLinked)
+    {
+        throw new NotImplementedException();
     }
 }
 

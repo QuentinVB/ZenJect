@@ -82,7 +82,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 20.6
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -90,7 +90,7 @@ NavMeshSettings:
     manualCellSize: 0
     cellSize: 0.16666667
     accuratePlacement: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: f7a3e3964099e654e875bdab34a11fee, type: 2}
 --- !u!1 &38229430
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812695723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cf2aeef43eb6704e8aeb7374b51cdd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ab030e942e219747a0e6df9358d0694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   NPCPrefab: {fileID: 1655838615974496, guid: f3ccc44eab352ac46ba0cc4820079733, type: 2}

@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class NPCAnimCtrl : IAnimCtrl
+public class NPCAnimCtrl : IAnimCtrl, INPCComponent
 {
-    NPC entityLinked;
+    NPC NPCLinked;
+    NPCData data;
     Animator animator;
-    public NPCAnimCtrl(NPC entityToBeLinked)
+
+    public NPCAnimCtrl(NPCData data)
     {
-        entityLinked = entityToBeLinked;
-        animator = entityLinked.GetComponent<Animator>();
-        Debug.Log("EndBindingAnimCtrl");
+        this.data = data;
+        Debug.Log("New NPCAnimCtrl Created");
+
+    }
+    public void setup(NPC NPCToBeLinked)
+    {
+        NPCLinked = NPCToBeLinked;
+        animator = NPCLinked.GetComponent<Animator>();
+        Debug.Log("EndBinding NPCAnimCtrl");
     }
     public void updateAnimation(int playThis)
     {

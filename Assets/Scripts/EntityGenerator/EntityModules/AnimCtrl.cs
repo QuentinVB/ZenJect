@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class AnimCtrl : IAnimCtrl
@@ -26,5 +27,10 @@ public class AnimCtrl : IAnimCtrl
                 break;
         }
 
+    }
+
+    public void setup(NPC NPCToBeLinked)
+    {
+        throw new NotImplementedException();
     }
 }
