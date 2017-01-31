@@ -7,9 +7,7 @@ using Zenject;
 
 public class NPCSpawner : ITickable
 {
-    readonly NPC.Factory _NPCFactory;
-    const float MIN_ENEMY_SPEED = 0.1f;
-    const float MAX_ENEMY_SPEED = 0.5f;
+    readonly NPC.Factory _NPCFactory;  
 
     FactoryAnimation _animationFactory;
     FactoryPathfinding _pathfindingFactory;

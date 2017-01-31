@@ -13,7 +13,6 @@ public class NPC : MonoBehaviour
     IPathfinding _pathfinding;
     ITailor _tailor;
 
-
     // Note that we can't use a constructor anymore since we are a MonoBehaviour now
     [Inject]
     public void Construct(
@@ -38,8 +37,7 @@ public class NPC : MonoBehaviour
         IAnimCtrl,
         IPathfinding, 
         NPC>
-    {
-       
+    {      
 
     }
     void Start()
@@ -57,7 +55,6 @@ public class NPC : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _animationControl.updateAnimation(0);
-        }
-        
+        }       
     }
 }

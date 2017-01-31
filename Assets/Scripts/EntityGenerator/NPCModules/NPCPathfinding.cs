@@ -17,8 +17,6 @@ public class NPCPathfinding : IPathfinding, INPCComponent
     {
         this.data = data;
         Debug.Log("New NPCPathfinding Created");
-
-
     }
     public void setup(NPC NPCToBeLinked)
     {
